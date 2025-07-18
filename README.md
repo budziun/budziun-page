@@ -1,6 +1,5 @@
 # 🌐 [budziun.pl](https://budziun.pl)
 
-[![Deploy to GitHub Pages](https://github.com/budziun/budziun-page/actions/workflows/deploy.yml/badge.svg)](https://github.com/budziun/budziun-page/actions/workflows/deploy.yml)
 [![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white)](https://vuejs.org/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=flat&logo=github&logoColor=white)](https://pages.github.com/)
 
