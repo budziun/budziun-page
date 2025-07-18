@@ -192,7 +192,6 @@ export default {
   watch: {
     '$i18n.locale'() {
       this.$nextTick(() => {
-        console.log('Język zmieniony w TechStack');
       });
     }
   },
