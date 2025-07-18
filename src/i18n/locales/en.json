@@ -1,0 +1,233 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "switchToPolish": "Switch to Polish",
+    "switchToEnglish": "Switch to English"
+  },
+  "meta": {
+    "title": "Jakub Budzich - Frontend Developer",
+    "description": "Website of Jakub Budzich - computer science student and junior frontend developer. Projects in Vue.js, React, Angular."
+  },
+  "nav": {
+    "about": "About",
+    "tech": "Tech Stack",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Jakub Budzich",
+    "jobTitle": "Junior Frontend Developer",
+    "description": "I create modern and responsive web applications using the latest technologies.",
+    "viewProjects": "View my projects",
+    "contactBtn": "Contact",
+    "scrollDown": "Scroll down"
+  },
+  "about": {
+    "title": "About me",
+    "paragraph1": "I am a 4th year computer science student at UWM Olsztyn. After completing my bachelor's degree, I plan to continue my studies to obtain a master's degree in computer science.",
+    "paragraph2": "I don't have professional experience yet. I owe all my knowledge and skills to university courses and personal projects that can be found on my GitHub profile.",
+    "paragraph3": "I am always open to new challenges and eager to take on ambitious projects, mainly as a frontend developer, but I am ready to learn in other areas of programming."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Contact information",
+    "description": "If you are interested in collaboration or have any questions, don't hesitate to contact me.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "role": "Junior Frontend Developer",
+    "navigation": "Navigation",
+    "home": "Home",
+    "socialMedia": "Social Media",
+    "copyright": "All rights reserved.",
+    "madeWith": "Website created using Vue.js"
+  },
+  "tech": {
+    "title": "My Tech Stack",
+    "description": "Technologies I know and use in my projects.",
+    "clickInstruction": "Click on a tile to see more information and example projects.",
+    "mainTechnologies": "Main Technologies",
+    "otherTechnologies": "Other Technologies",
+    "projectsUsing": "Projects using",
+    "repository": "Repository",
+    "demo": "Demo",
+    "download": "Download",
+    "noProjects": "No projects to display for this technology.",
+    "technologies": {
+      "vue": {
+        "description": "I know the basics of Vue.js - my first project is this very website you're on, but in the future I plan to create frontends for websites using this framework",
+        "projects": {
+          "portfolio": {
+            "name": "Portfolio CV",
+            "description": "Portfolio website with animations and interactive elements."
+          },
+          "avgweather": {
+            "name": "AVG WEATHER",
+            "description": "Website using weather APIs from multiple sources to show users average values"
+          }
+        }
+      },
+      "react": {
+        "description": "I know the basics of React, currently I've only used it in my bachelor's thesis but I plan to expand my projects in this environment",
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Web application for managing Spotify playlists"
+          }
+        }
+      },
+      "angular": {
+        "description": "I know the basics of Angular and TypeScript - although I personally prefer React or Vue.js, I can take on projects in this environment",
+        "projects": {
+          "qrcode": {
+            "name": "QR code generator",
+            "description": "Web application for generating custom QR codes from text with personalization options"
+          },
+          "zaraz": {
+            "name": "Zaraz Zrobimy",
+            "description": "I created the frontend of a pawnshop inventory management application, project completed as part of a Team Project course at university, supervised by Zeto Software Olsztyn - verified with a certificate from the company after completing the university course"
+          }
+        }
+      },
+      "html": {
+        "description": "HTML5 + CSS at intermediate level as it's basic skill for frontend development of web applications",
+        "projects": {
+          "www": {
+            "name": "WWW Programming Course",
+            "description": "WWW website for course completion using HTML and CSS tags as well as PHP"
+          }
+        }
+      },
+      "tailwind": {
+        "description": "I used this framework in my engineering thesis, so there's no repo link yet",
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Web application for managing Spotify playlists"
+          }
+        }
+      },
+      "javascript": {
+        "description": "JavaScript - I know the basics learned during state education, additionally I created a Chrome extension based mostly on pure JavaScript",
+        "projects": {
+          "quicksearch": {
+            "name": "Quick Search",
+            "description": "Google Chrome extension allowing search using shortcuts"
+          },
+          "www": {
+            "name": "WWW Programming Course",
+            "description": "Basic use of pure JavaScript for animation purposes"
+          }
+        }
+      },
+      "python": {
+        "description": "I know Python basics and feel comfortable in this programming language - when I need a backend project, I choose this language",
+        "projects": {
+          "uchwalomat": {
+            "name": "Uchwalomat.PDF",
+            "description": "Program for finding publication titles in PDF files - created during internship at municipal office"
+          },
+          "yttomp3": {
+            "name": "ytToMP3",
+            "description": "Program for downloading tracks from YouTube in .mp3 format"
+          },
+          "unittest": {
+            "name": "Unit tests - unittest",
+            "description": "Final project involving creating various Python tests based on a chosen library"
+          }
+        }
+      },
+      "php": {
+        "description": "I've written projects in pure PHP, I know its basics",
+        "projects": {
+          "quiz": {
+            "name": "Polish License Plates Quiz",
+            "description": "Website testing player's knowledge of Polish license plates in quiz form"
+          }
+        }
+      },
+      "c": {
+        "description": "Basics learned in laboratory classes.",
+        "projects": {
+          "embedded": {
+            "name": "Course - Embedded Systems",
+            "description": "Repository from laboratory classes based on microcontroller programming"
+          }
+        }
+      },
+      "cpp": {
+        "description": "I know C++ basics covered in university classes",
+        "projects": {}
+      },
+      "mysql": {
+        "description": "MySQL at intermediate level",
+        "projects": {
+          "quiz": {
+            "name": "Polish License Plates Quiz",
+            "description": "SQL database project developed in MySQL for PHP quiz website"
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Selected projects I've created. Each one was built with solving a specific problem in mind and using best programming practices.",
+    "filters": {
+      "all": "All",
+      "vuejs": "Vue.js",
+      "react": "React",
+      "angular": "Angular",
+      "javascript": "JavaScript",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "php": "PHP",
+      "python": "Python"
+    },
+    "links": {
+      "github": "GitHub",
+      "demo": "Demo",
+      "download": "Download"
+    },
+    "projectList": {
+      "qrcode": {
+        "title": "QR Code Generator",
+        "description": "Web application for generating QR codes from custom text with personalization options"
+      },
+      "avgweather": {
+        "title": "AVG WEATHER",
+        "description": "Website using weather APIs from multiple sources to show users average values"
+      },
+      "portfolio": {
+        "title": "Portfolio CV",
+        "description": "Portfolio website with animations and interactive elements. Built with Vue.js"
+      },
+      "quiz": {
+        "title": "Quiz tablice PL",
+        "description": "PHP website featuring a quiz about Polish license plates"
+      },
+      "uchwalomat": {
+        "title": "Uchwalomat.PDF",
+        "description": "Program for finding publication titles in PDF files"
+      },
+      "spotify": {
+        "title": "Spotify Matcher",
+        "description": "Application for managing user's Spotify playlists"
+      },
+      "quicksearch": {
+        "title": "Quick Search",
+        "description": "Google Chrome extension for searching with shortcuts"
+      },
+      "yttomp3": {
+        "title": "YT TO MP3",
+        "description": "Application for downloading tracks from YouTube in mp3 format"
+      },
+      "zaraz": {
+        "title": "Zaraz Zrobimy",
+        "description": "Pawnshop inventory management application - team project with Zeto Software"
+      }
+    }
+  }
+}

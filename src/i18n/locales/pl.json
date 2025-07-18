@@ -1,0 +1,233 @@
+{
+  "common": {
+    "loading": "Ładowanie...",
+    "switchToPolish": "Przełącz na język polski",
+    "switchToEnglish": "Przełącz na język angielski"
+  },
+  "meta": {
+    "title": "Jakub Budzich - Frontend Developer",
+    "description": "Strona Jakuba Budzicha - student informatyki i junior frontend developer. Projekty w Vue.js, React, Angular."
+  },
+  "nav": {
+    "about": "O mnie",
+    "tech": "Technologie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "name": "Jakub Budzich",
+    "jobTitle": "Junior Frontend Developer",
+    "description": "Tworzę nowoczesne i responsywne aplikacje webowe z wykorzystaniem najnowszych technologii.",
+    "viewProjects": "Zobacz moje projekty",
+    "contactBtn": "Kontakt",
+    "scrollDown": "Przewiń w dół"
+  },
+  "about": {
+    "title": "O mnie",
+    "paragraph1": "Jestem studentem informatyki 4 roku na UWM Olsztyn, po zakończeniu studiów pierwszego stopnia planuję podjąć dalszą naukę w celu uzyskania tytułu magistra z informatyki.",
+    "paragraph2": "Nie posiadam jeszcze doświadczenia zawodowego. Całą swoją wiedzę i umiejętności zawdzięczam kursom na studiach oraz własnych projektach które można znaleźć na moim profilu github.",
+    "paragraph3": "Jestem zawsze otwarty na nowe wyzwania i chętnie podejmuję się ambitnych projektów, głównie jako frontend developer, ale jestem gotowy na naukę w innych dziedzinach programowania."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Dane kontaktowe",
+    "description": "Jeśli jesteś zainteresowany współpracą lub masz jakiekolwiek pytania, nie wahaj się skontaktować ze mną.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "role": "Junior Frontend Developer",
+    "navigation": "Nawigacja",
+    "home": "Strona główna",
+    "socialMedia": "Social Media",
+    "copyright": "Wszelkie prawa zastrzeżone.",
+    "madeWith": "Strona stworzona z wykorzystaniem Vue.js"
+  },
+  "tech": {
+    "title": "Mój Tech Stack",
+    "description": "Technologie, które znam i wykorzystuję w swoich projektach.",
+    "clickInstruction": "Kliknij kafelek, aby zobaczyć więcej informacji i przykładowe projekty.",
+    "mainTechnologies": "Główne Technologie",
+    "otherTechnologies": "Inne Technologie",
+    "projectsUsing": "Projekty wykorzystujące",
+    "repository": "Repozytorium",
+    "demo": "Demo",
+    "download": "Download",
+    "noProjects": "Brak projektów do wyświetlenia dla tej technologii.",
+    "technologies": {
+      "vue": {
+        "description": "Znam podstawy Vue.js - pierwszym moim projektem jest własnie ta strona na której się znajdujesz ale w przyszłości zamierzam tworzyć front dla stron właśnie w tym frameworku",
+        "projects": {
+          "portfolio": {
+            "name": "Portfolio CV",
+            "description": "Strona portfolio z animacjami i interaktywnymi elementami."
+          },
+          "avgweather": {
+            "name": "AVG WEATHER",
+            "description": "Strona wykorzystująca API pogodowe z kilku źródeł w celu pokazania użytkownikowi średniej wartości"
+          }
+        }
+      },
+      "react": {
+        "description": "Znam podstawy React, na ten moment wykorzystałem go tylko w pracy inżynierskiej ale zamierzam poszerzyć swoje projekty w tym środowisku",
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Aplikacja webowa do zarządzania playlistami spotify"
+          }
+        }
+      },
+      "angular": {
+        "description": "Znam podstawy angular oraz TypeScript - mimo to osobiście preferuje React lub Vue.js ale mogę się podjąć projektu w tym środowisku",
+        "projects": {
+          "qrcode": {
+            "name": "QR code generator",
+            "description": "Aplikacja webowa do generowania własnych kodów QR z tekstu z możliwością personalizacji"
+          },
+          "zaraz": {
+            "name": "Zaraz Zrobimy",
+            "description": "Tworzyłem frontend aplikacji do Zarządzania inwentarzem lombardu, projekt wykonany w ramach kursu na studiach Projekt Zespołowy, pod nadzorem firmy Zeto Software Olsztyn - zweryfikowane certyfikatem od firmy po zakończeniu kursu na studiach"
+          }
+        }
+      },
+      "html": {
+        "description": "HTML5 + CSS na poziomie średnio-zaawansowanym dlatego że jest to baza pod frontend develop aplikacji webowych",
+        "projects": {
+          "www": {
+            "name": "Przedmiot programowanie stron WWW",
+            "description": "Strona WWW na zaliczenie przedmiotu wykorzystująca znaczniki HTML i CSS oraz php"
+          }
+        }
+      },
+      "tailwind": {
+        "description": "Użyłem tego frameworku w pracy inżynierskiej dlatego jeszcze nie ma linku do repo",
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Aplikacja webowa do zarządzania playlistami spotify"
+          }
+        }
+      },
+      "javascript": {
+        "description": "JavaScript - znam podstawy które poznałem w trakcie edukacji państwowej, ponadto wykonałem rozszerzenie do chrome oparte w większości na czystym JavaScript",
+        "projects": {
+          "quicksearch": {
+            "name": "Quick Search",
+            "description": "Rozszerzenie do google chrome pozwalające na szukanie za pomocą skrótów"
+          },
+          "www": {
+            "name": "Przedmiot programowanie stron WWW",
+            "description": "Szczątkowe wykorzystanie czystego JavaScript w celach animacji"
+          }
+        }
+      },
+      "python": {
+        "description": "Znam podstawy Python i dobrze czuje się w tym języku programowania - jeśli potrzebuje projektu backendowego, wybieram ten język",
+        "projects": {
+          "uchwalomat": {
+            "name": "Uchwalomat.PDF",
+            "description": "Program do znajdowania tytułów publikacji w plikach PDF - stworzony podczas praktyk w urzędzie gminy"
+          },
+          "yttomp3": {
+            "name": "ytToMP3",
+            "description": "Program do pobierania utworów z YouTube w formacie .mp3"
+          },
+          "unittest": {
+            "name": "Testy jednostkowe - unitest",
+            "description": "Projekt zaliczeniowy polegający na stworzeniu różnorodnych testów python w oparciu o wybraną bibliotekę"
+          }
+        }
+      },
+      "php": {
+        "description": "Pisałem projekty w czystym PHP, znam jego podstawy",
+        "projects": {
+          "quiz": {
+            "name": "Quiz tablice pl",
+            "description": "Strona sprawdzająca wiedzę gracza ze znajomości polskich tablic rejestracyjnych w formie quizu"
+          }
+        }
+      },
+      "c": {
+        "description": "Podstawy poznane na zajęciach laboratoryjnych.",
+        "projects": {
+          "embedded": {
+            "name": "Kurs - Systemy wbudowane",
+            "description": "Repo z zajęć laboratoryjnych opartych na programowaniu mikrokontolerów"
+          }
+        }
+      },
+      "cpp": {
+        "description": "Znam podstawy C++ realizowane na zajęciach podczas studiów",
+        "projects": {}
+      },
+      "mysql": {
+        "description": "MySQL poziom średio-zaawansowny",
+        "projects": {
+          "quiz": {
+            "name": "Quiz tablice pl",
+            "description": "Projekt bazy danych SQL opracowany w MySQL dla strony z quizami PHP"
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "Moje Projekty",
+    "description": "Wybrane projekty, które stworzyłem. Każdy z nich został zbudowany z myślą o rozwiązaniu konkretnego problemu i wykorzystaniu najlepszych praktyk programistycznych.",
+    "filters": {
+      "all": "Wszystkie",
+      "vuejs": "Vue.js",
+      "react": "React",
+      "angular": "Angular",
+      "javascript": "JavaScript",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "php": "PHP",
+      "python": "Python"
+    },
+    "links": {
+      "github": "GitHub",
+      "demo": "Demo",
+      "download": "Download"
+    },
+    "projectList": {
+      "qrcode": {
+        "title": "QR code generator",
+        "description": "Aplikacja webowa do generowania kodów QR z własnego tekstu z personalizacją"
+      },
+      "avgweather": {
+        "title": "AVG WEATHER",
+        "description": "Strona wykorzystująca API pogodowe z kilku źródeł w celu pokazania użytkownikowi średniej wartości"
+      },
+      "portfolio": {
+        "title": "Portfolio CV",
+        "description": "Strona portfolio z animacjami i interaktywnymi elementami. Wykorzystuje Vue.js"
+      },
+      "quiz": {
+        "title": "Quiz tablice PL",
+        "description": "Strona w php przypominająca quiz dla tablic rejestracyjnych z polski"
+      },
+      "uchwalomat": {
+        "title": "Uchwalomat.PDF",
+        "description": "Program do znajdowania tytułów publikacji w plikach PDF - stworzony podczas praktyk w urzędzie gminy"
+      },
+      "spotify": {
+        "title": "Spotify Matcher",
+        "description": "Aplikacja do zarządzania playlistami użytkownika Spotify"
+      },
+      "quicksearch": {
+        "title": "Quick Search",
+        "description": "Rozszerzenie do Google Chrome do wyszukiwania skrótami"
+      },
+      "yttomp3": {
+        "title": "YT TO MP3",
+        "description": "Aplikacja do pobierania utworów z Youtube w formacie mp3"
+      },
+      "zaraz": {
+        "title": "Zaraz Zrobimy",
+        "description": "Aplikacja do zarządzania inwentarzem lombardu - projekt zespołowy z Zeto Software"
+      }
+    }
+  }
+}
