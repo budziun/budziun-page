@@ -47,21 +47,28 @@
   "tech": {
     "title": "Mój Tech Stack",
     "description": "Technologie, które znam i wykorzystuję w swoich projektach.",
-    "clickInstruction": "Kliknij kafelek, aby zobaczyć więcej informacji i przykładowe projekty.",
+    "clickInstruction": "Kliknij kafelek, aby zobaczyć przykładowe projekty.",
     "mainTechnologies": "Główne Technologie",
     "otherTechnologies": "Inne Technologie",
     "projectsUsing": "Projekty wykorzystujące",
     "repository": "Repozytorium",
     "demo": "Demo",
-    "download": "Download",
+    "download": "Pobierz",
     "noProjects": "Brak projektów do wyświetlenia dla tej technologii.",
     "technologies": {
+      "react": {
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Aplikacja webowa do zarządzania playlistami Spotify"
+          }
+        }
+      },
       "vue": {
-        "description": "Znam podstawy Vue.js - pierwszym moim projektem jest własnie ta strona na której się znajdujesz ale w przyszłości zamierzam tworzyć front dla stron właśnie w tym frameworku",
         "projects": {
           "portfolio": {
             "name": "Portfolio CV",
-            "description": "Strona portfolio z animacjami i interaktywnymi elementami."
+            "description": "Strona portfolio z animacjami i interaktywnymi elementami"
           },
           "avgweather": {
             "name": "AVG WEATHER",
@@ -69,61 +76,19 @@
           }
         }
       },
-      "react": {
-        "description": "Znam podstawy React, na ten moment wykorzystałem go tylko w pracy inżynierskiej ale zamierzam poszerzyć swoje projekty w tym środowisku",
-        "projects": {
-          "spotify": {
-            "name": "Spotify Matcher",
-            "description": "Aplikacja webowa do zarządzania playlistami spotify"
-          }
-        }
-      },
       "angular": {
-        "description": "Znam podstawy angular oraz TypeScript - mimo to osobiście preferuje React lub Vue.js ale mogę się podjąć projektu w tym środowisku",
         "projects": {
           "qrcode": {
-            "name": "QR code generator",
+            "name": "QR Code Generator",
             "description": "Aplikacja webowa do generowania własnych kodów QR z tekstu z możliwością personalizacji"
           },
           "zaraz": {
             "name": "Zaraz Zrobimy",
-            "description": "Tworzyłem frontend aplikacji do Zarządzania inwentarzem lombardu, projekt wykonany w ramach kursu na studiach Projekt Zespołowy, pod nadzorem firmy Zeto Software Olsztyn - zweryfikowane certyfikatem od firmy po zakończeniu kursu na studiach"
-          }
-        }
-      },
-      "html": {
-        "description": "HTML5 + CSS na poziomie średnio-zaawansowanym dlatego że jest to baza pod frontend develop aplikacji webowych",
-        "projects": {
-          "www": {
-            "name": "Przedmiot programowanie stron WWW",
-            "description": "Strona WWW na zaliczenie przedmiotu wykorzystująca znaczniki HTML i CSS oraz php"
-          }
-        }
-      },
-      "tailwind": {
-        "description": "Użyłem tego frameworku w pracy inżynierskiej dlatego jeszcze nie ma linku do repo",
-        "projects": {
-          "spotify": {
-            "name": "Spotify Matcher",
-            "description": "Aplikacja webowa do zarządzania playlistami spotify"
-          }
-        }
-      },
-      "javascript": {
-        "description": "JavaScript - znam podstawy które poznałem w trakcie edukacji państwowej, ponadto wykonałem rozszerzenie do chrome oparte w większości na czystym JavaScript",
-        "projects": {
-          "quicksearch": {
-            "name": "Quick Search",
-            "description": "Rozszerzenie do google chrome pozwalające na szukanie za pomocą skrótów"
-          },
-          "www": {
-            "name": "Przedmiot programowanie stron WWW",
-            "description": "Szczątkowe wykorzystanie czystego JavaScript w celach animacji"
+            "description": "Aplikacja do Zarządzania inwentarzem lombardu, projekt wykonany w ramach kursu na studiach Projekt Zespołowy"
           }
         }
       },
       "python": {
-        "description": "Znam podstawy Python i dobrze czuje się w tym języku programowania - jeśli potrzebuje projektu backendowego, wybieram ten język",
         "projects": {
           "uchwalomat": {
             "name": "Uchwalomat.PDF",
@@ -134,13 +99,40 @@
             "description": "Program do pobierania utworów z YouTube w formacie .mp3"
           },
           "unittest": {
-            "name": "Testy jednostkowe - unitest",
+            "name": "Testy jednostkowe - unittest",
             "description": "Projekt zaliczeniowy polegający na stworzeniu różnorodnych testów python w oparciu o wybraną bibliotekę"
           }
         }
       },
+      "typescript": {
+        "projects": {
+          "spotimatcher": {
+            "name": "SpotiMatcher",
+            "description": "Aplikacja do dopasowywania profili muzycznych na podstawie preferencji Spotify"
+          },
+          "zaraz": {
+            "name": "Zaraz Zrobimy",
+            "description": "Aplikacja do zarządzania inwentarzem lombardu - projekt zespołowy z Zeto Software"
+          },
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "Generator kodów QR z różnymi opcjami personalizacji"
+          }
+        }
+      },
+      "javascript": {
+        "projects": {
+          "quicksearch": {
+            "name": "Quick Search",
+            "description": "Rozszerzenie do Google Chrome pozwalające na szukanie za pomocą skrótów"
+          },
+          "www": {
+            "name": "Strona WWW",
+            "description": "Projekt z wykorzystaniem czystego JavaScript w celach animacji"
+          }
+        }
+      },
       "php": {
-        "description": "Pisałem projekty w czystym PHP, znam jego podstawy",
         "projects": {
           "quiz": {
             "name": "Quiz tablice pl",
@@ -148,21 +140,66 @@
           }
         }
       },
+      "django": {
+        "projects": {
+          "dikfinder": {
+            "name": "Dzik Finder",
+            "description": "Aplikacja do wyswietlania sklepow z dostępnymi produktami WK DZIK"
+          }
+        }
+      },
+      "html": {
+        "projects": {
+          "www": {
+            "name": "Strona WWW",
+            "description": "Strona WWW na zaliczenie przedmiotu wykorzystująca znaczniki HTML i CSS oraz PHP"
+          }
+        }
+      },
+      "tailwind": {
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Aplikacja webowa do zarządzania playlistami Spotify"
+          }
+        }
+      },
+      "bootstrap": {
+        "projects": {
+          "quiz": {
+            "name": "Quiz tablice pl",
+            "description": "Strona sprawdzająca wiedzę gracza ze znajomości polskich tablic rejestracyjnych w formie quizu"
+          }
+        }
+      },
+      "cicd": {
+        "projects": {
+          "portfolio": {
+            "name": "Portfolio CV",
+            "description": "Strona portfolio z automatycznym wdrażaniem na GitHub Pages"
+          },
+          "avgweather": {
+            "name": "AVG WEATHER",
+            "description": "Strona z pogodą automatycznie wdrażana na GitHub Pages"
+          },
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "Generator kodów QR z automatycznym wdrażaniem na GitHub Pages"
+          }
+        }
+      },
       "c": {
-        "description": "Podstawy poznane na zajęciach laboratoryjnych.",
         "projects": {
           "embedded": {
-            "name": "Kurs - Systemy wbudowane",
-            "description": "Repo z zajęć laboratoryjnych opartych na programowaniu mikrokontolerów"
+            "name": "Systemy wbudowane",
+            "description": "Repo z zajęć laboratoryjnych opartych na programowaniu mikrokontrolerów"
           }
         }
       },
       "cpp": {
-        "description": "Znam podstawy C++ realizowane na zajęciach podczas studiów",
         "projects": {}
       },
       "mysql": {
-        "description": "MySQL poziom średio-zaawansowny",
         "projects": {
           "quiz": {
             "name": "Quiz tablice pl",
@@ -189,11 +226,11 @@
     "links": {
       "github": "GitHub",
       "demo": "Demo",
-      "download": "Download"
+      "download": "Pobierz"
     },
     "projectList": {
       "qrcode": {
-        "title": "QR code generator",
+        "title": "QR Code Generator",
         "description": "Aplikacja webowa do generowania kodów QR z własnego tekstu z personalizacją"
       },
       "avgweather": {
@@ -206,11 +243,11 @@
       },
       "quiz": {
         "title": "Quiz tablice PL",
-        "description": "Strona w php przypominająca quiz dla tablic rejestracyjnych z polski"
+        "description": "Strona w PHP przypominająca quiz dla tablic rejestracyjnych z Polski"
       },
       "uchwalomat": {
         "title": "Uchwalomat.PDF",
-        "description": "Program do znajdowania tytułów publikacji w plikach PDF - stworzony podczas praktyk w urzędzie gminy"
+        "description": "Program do znajdowania tytułów publikacji w plikach PDF - wykorzystuje OCR do odczytywania dokumentów"
       },
       "spotify": {
         "title": "Spotify Matcher",
@@ -222,7 +259,7 @@
       },
       "yttomp3": {
         "title": "YT TO MP3",
-        "description": "Aplikacja do pobierania utworów z Youtube w formacie mp3"
+        "description": "Aplikacja do pobierania utworów z YouTube w formacie mp3"
       },
       "zaraz": {
         "title": "Zaraz Zrobimy",

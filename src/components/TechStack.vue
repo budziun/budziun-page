@@ -5,7 +5,6 @@
       {{ $t('tech.description') }}
       <strong>{{ $t('tech.clickInstruction') }}</strong>
     </p>
-
     <h3 class="tech-subtitle fade-in" ref="mainTechTitle">{{ $t('tech.mainTechnologies') }}</h3>
     <div class="tech-grid">
       <div
@@ -22,7 +21,6 @@
         <h3>{{ tech.name }}</h3>
       </div>
     </div>
-
     <h3 class="tech-subtitle fade-in" ref="secondaryTechTitle">{{ $t('tech.otherTechnologies') }}</h3>
     <div class="secondary-tech-grid">
       <div
@@ -31,7 +29,6 @@
           class="secondary-tech-card fade-in"
           :ref="`secondaryTechCard${index}`"
           :style="{ animationDelay: `${index * 0.1}s` }"
-          @click="openTechDetails(tech.id)"
       >
         <div class="tech-icon small">
           <img :src="tech.icon" :alt="tech.name" />
@@ -39,7 +36,6 @@
         <h4>{{ tech.name }}</h4>
       </div>
     </div>
-
     <!-- Popup tech details -->
     <div class="tech-details" :class="{ active: activeTech !== null }" ref="techDetails" @click.self="closeTechDetails">
       <div class="tech-details-content" v-if="activeTech !== null">
@@ -51,7 +47,6 @@
           <button class="close-btn" @click="closeTechDetails">×</button>
         </div>
         <div class="tech-details-body">
-          <p>{{ $t(`tech.technologies.${activeTech.id}.description`) }}</p>
           <div class="tech-projects" v-if="activeTech.projects && activeTech.projects.length > 0">
             <h4>{{ $t('tech.projectsUsing') }} {{ activeTech.name }}:</h4>
             <ul>
@@ -82,7 +77,6 @@
     </div>
   </section>
 </template>
-
 <script>
 export default {
   name: 'TechStack',
@@ -91,31 +85,78 @@ export default {
       activeTech: null,
       mainTechStack: [
         {
+          id: 'react',
+          name: 'React',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+          projects: [
+            { id: 'spotify', repo: '', demo: '' }
+          ]
+        },
+        {
           id: 'vue',
           name: 'Vue.js',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
           projects: [
             { id: 'portfolio', repo: 'https://github.com/budziun/budziun-page', demo: 'https://budziun.github.io/budziun-page/' },
             { id: 'avgweather', repo: 'https://github.com/budziun/avg-weather', demo: 'https://budziun.github.io/avg-weather/' }
           ]
         },
         {
-          id: 'react',
-          name: 'React',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-          projects: [
-            { id: 'spotify', repo: '', demo: '' }
-          ]
-        },
-        {
           id: 'angular',
           name: 'Angular',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg',
           projects: [
             { id: 'qrcode', repo: 'https://github.com/budziun/qr-code-generator', demo: 'https://budziun.github.io/qr-code-generator/' },
             { id: 'zaraz', repo: 'https://github.com/Cent0l/ZarazZrobimy', demo: '' }
           ]
         },
+        {
+          id: 'python',
+          name: 'Python',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+          projects: [
+            { id: 'uchwalomat', repo: 'https://github.com/budziun/Uchwalomat.PDF', download: 'https://github.com/budziun/Uchwalomat.PDF/releases/download/UchwalomatPDF/Uchwalomat-PDF.exe' },
+            { id: 'yttomp3', repo: 'https://github.com/budziun/ytToMP3', demo: '' },
+            { id: 'unittest', repo: 'https://github.com/budziun/testowanie_opragromowania_python', demo: '' }
+          ]
+        },
+        {
+          id: 'typescript',
+          name: 'TypeScript',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+          projects: [
+            { id: 'spotimatcher', repo: '', demo: '' },
+            { id: 'zaraz', repo: 'https://github.com/Cent0l/ZarazZrobimy', demo: '' },
+            { id: 'qrcode', repo: 'https://github.com/budziun/qr-code-generator', demo: 'https://budziun.github.io/qr-code-generator/' }
+          ]
+        },
+        {
+          id: 'javascript',
+          name: 'JavaScript',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+          projects: [
+            { id: 'quicksearch', repo: 'https://github.com/budziun/Quick_Search', demo: '' },
+            { id: 'www', repo: 'https://github.com/budziun/WWW', demo: '' }
+          ]
+        },
+        {
+          id: 'php',
+          name: 'PHP',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
+          projects: [
+            { id: 'quiz', repo: 'https://github.com/budziun/quiz-tablice-pl', demo: 'https://quiz-tablice-pl-production.up.railway.app/' }
+          ]
+        },
+        {
+          id: 'django',
+          name: 'Django',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg',
+          projects: [
+            { id: 'dikfinder', repo: '', demo: '' }
+          ]
+        }
+      ],
+      secondaryTechStack: [
         {
           id: 'html',
           name: 'HTML5 + CSS3',
@@ -127,61 +168,58 @@ export default {
         {
           id: 'tailwind',
           name: 'Tailwind CSS',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
           projects: [
             { id: 'spotify', repo: '', demo: '' }
           ]
         },
         {
-          id: 'javascript',
-          name: 'JavaScript',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-          projects: [
-            { id: 'quicksearch', repo: 'https://github.com/budziun/Quick_Search', demo: '' },
-            { id: 'www', repo: 'https://github.com/budziun/WWW', demo: '' }
-          ]
-        },
-        {
-          id: 'python',
-          name: 'Python',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-          projects: [
-            { id: 'uchwalomat', repo: 'https://github.com/budziun/Uchwalomat.PDF', download: 'https://github.com/budziun/Uchwalomat.PDF/releases/download/UchwalomatPDF/Uchwalomat-PDF.exe' },
-            { id: 'yttomp3', repo: 'https://github.com/budziun/ytToMP3', demo: '' },
-            { id: 'unittest', repo: 'https://github.com/budziun/testowanie_opragromowania_python', demo: '' }
-          ]
-        },
-        {
-          id: 'php',
-          name: 'PHP',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+          id: 'bootstrap',
+          name: 'Bootstrap',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg',
           projects: [
             { id: 'quiz', repo: 'https://github.com/budziun/quiz-tablice-pl', demo: 'https://quiz-tablice-pl-production.up.railway.app/' }
           ]
-        }
-      ],
-      secondaryTechStack: [
+        },
         {
-          id: 'c',
-          name: 'C',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+          id: 'cicd',
+          name: 'CI/CD',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
           projects: [
-            { id: 'embedded', repo: 'https://github.com/budziun/systemy-wbudowane', demo: '' }
+            { id: 'portfolio', repo: 'https://github.com/budziun/budziun-page', demo: 'https://budziun.github.io/budziun-page/' },
+            { id: 'avgweather', repo: 'https://github.com/budziun/avg-weather', demo: 'https://budziun.github.io/avg-weather/' },
+            { id: 'qrcode', repo: 'https://github.com/budziun/qr-code-generator', demo: 'https://budziun.github.io/qr-code-generator/' }
           ]
         },
         {
-          id: 'cpp',
-          name: 'C++',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
-          projects: []
+          id: 'nodejs',
+          name: 'Node.js',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg'
+        },
+        {
+          id: 'postgresql',
+          name: 'PostgreSQL',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg'
+        },
+        {
+          id: 'docker',
+          name: 'Docker',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg'
+        },
+        {
+          id: 'postman',
+          name: 'Postman',
+          icon: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg'
         },
         {
           id: 'mysql',
           name: 'MySQL',
-          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
-          projects: [
-            { id: 'quiz', repo: 'https://github.com/budziun/quiz_tablice_pl', demo: '' }
-          ]
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg'
+        },
+        {
+          id: 'git',
+          name: 'Git',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg'
         }
       ]
     }
@@ -202,7 +240,6 @@ export default {
         rootMargin: '0px',
         threshold: 0.2
       };
-
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -211,19 +248,16 @@ export default {
           }
         });
       }, options);
-
       if (this.$refs.sectionTitle) observer.observe(this.$refs.sectionTitle);
       if (this.$refs.techDesc) observer.observe(this.$refs.techDesc);
       if (this.$refs.mainTechTitle) observer.observe(this.$refs.mainTechTitle);
       if (this.$refs.secondaryTechTitle) observer.observe(this.$refs.secondaryTechTitle);
-
       this.mainTechStack.forEach((_, index) => {
         const refName = `techCard${index}`;
         if (this.$refs[refName] && this.$refs[refName][0]) {
           observer.observe(this.$refs[refName][0]);
         }
       });
-
       this.secondaryTechStack.forEach((_, index) => {
         const refName = `secondaryTechCard${index}`;
         if (this.$refs[refName] && this.$refs[refName][0]) {
@@ -232,9 +266,7 @@ export default {
       });
     },
     openTechDetails(techId) {
-      const tech = this.mainTechStack.find(t => t.id === techId) ||
-          this.secondaryTechStack.find(t => t.id === techId);
-
+      const tech = this.mainTechStack.find(t => t.id === techId);
       if (tech) {
         this.activeTech = tech;
         document.body.classList.add('modal-open');
@@ -247,7 +279,6 @@ export default {
   }
 }
 </script>
-
 <style scoped>
 .tech-section {
   background-color: #f9f9f9;
@@ -258,7 +289,6 @@ export default {
   justify-content: center;
   padding-bottom: 4rem;
 }
-
 .tech-description {
   text-align: center;
   max-width: 800px;
@@ -266,7 +296,6 @@ export default {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-
 .tech-subtitle {
   font-size: 1.8rem;
   color: var(--primary-color);
@@ -276,12 +305,10 @@ export default {
   transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-
 .tech-subtitle.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -289,17 +316,16 @@ export default {
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
-
 .secondary-tech-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 1rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  grid-auto-rows: 1fr;
 }
-
 .tech-card {
   background-color: var(--card-bg);
   border-radius: 10px;
@@ -312,7 +338,6 @@ export default {
   overflow: hidden;
   z-index: 1;
 }
-
 .secondary-tech-card {
   background-color: var(--card-bg);
   border-radius: 8px;
@@ -320,12 +345,17 @@ export default {
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  aspect-ratio: 1 / 1;
 }
-
 .tech-card::before, .secondary-tech-card::before {
   content: '';
   position: absolute;
@@ -338,64 +368,59 @@ export default {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 .tech-card:hover, .secondary-tech-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 35px rgba(0, 0, 0,.15);
 }
-
-.tech-card:hover::before, .secondary-tech-card:hover::before {
+.tech-card:hover::before {
   opacity: 1;
 }
-
-.tech-card:hover h3,
-.secondary-tech-card:hover h4 {
+.tech-card:hover h3 {
   color: white;
 }
-
 .tech-icon {
   height: 80px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
 }
-
 .tech-icon.small {
   height: 60px;
   margin-bottom: 0.8rem;
 }
-
 .tech-icon img {
+  width: 80px;
+  height: 80px;
   max-width: 80px;
   max-height: 80px;
   object-fit: contain;
   transition: transform 0.3s ease;
+  display: block;
 }
-
 .tech-icon.small img {
+  width: 50px;
+  height: 50px;
   max-width: 50px;
   max-height: 50px;
 }
-
-.tech-card:hover .tech-icon img,
-.secondary-tech-card:hover .tech-icon img {
+.tech-card:hover .tech-icon img {
   transform: scale(1.1);
 }
-
 .tech-card h3 {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   transition: color 0.3s ease;
 }
-
 .secondary-tech-card h4 {
   font-size: 1.2rem;
   margin-top: 0.5rem;
   transition: color 0.3s ease;
+  word-break: break-word;
+  hyphens: auto;
 }
-
 /* Tech details popup */
 .tech-details {
   position: fixed;
@@ -413,12 +438,10 @@ export default {
   transition: opacity 0.3s ease, visibility 0.3s ease;
   cursor: pointer;
 }
-
 .tech-details.active {
   opacity: 1;
   visibility: visible;
 }
-
 .tech-details-content {
   background-color: var(--card-bg);
   width: 90%;
@@ -432,7 +455,6 @@ export default {
   animation: scaleIn 0.3s ease forwards;
   cursor: default;
 }
-
 .tech-details-header {
   display: flex;
   align-items: center;
@@ -440,7 +462,6 @@ export default {
   border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
 }
-
 .tech-details-icon {
   width: 60px;
   height: 60px;
@@ -449,18 +470,19 @@ export default {
   justify-content: center;
   margin-right: 1rem;
 }
-
 .tech-details-icon img {
+  width: 60px;
+  height: 60px;
   max-width: 100%;
   max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
-
 .tech-details-header h3 {
   font-size: 1.8rem;
   color: var(--primary-color);
   flex: 1;
 }
-
 .close-btn {
   background: none;
   border: none;
@@ -469,32 +491,26 @@ export default {
   cursor: pointer;
   transition: color 0.3s ease;
 }
-
 .close-btn:hover {
   color: var(--primary-color);
 }
-
 .tech-details-body p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-
 .tech-projects {
   margin-top: 2rem;
 }
-
 .tech-projects h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
-
 .tech-projects ul {
   list-style: none;
   padding: 0;
 }
-
 .tech-projects li {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -502,27 +518,22 @@ export default {
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
-
 .tech-projects li:hover {
   transform: translateX(10px);
 }
-
 .tech-projects a {
   color: var(--primary-color);
   font-weight: 600;
   text-decoration: none;
 }
-
 .tech-projects a:hover {
   text-decoration: underline;
 }
-
 .project-links {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
-
 .link-btn {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -532,11 +543,9 @@ export default {
   text-decoration: none !important;
   transition: background-color 0.3s ease;
 }
-
 .link-btn:hover {
   background-color: var(--secondary-color);
 }
-
 .no-projects-message {
   padding: 1.5rem;
   background-color: #f5f5f5;
@@ -545,7 +554,6 @@ export default {
   font-style: italic;
   color: #666;
 }
-
 @keyframes scaleIn {
   0% {
     transform: scale(0.9);
@@ -554,24 +562,26 @@ export default {
     transform: scale(1);
   }
 }
-
 /* Styl dla body, gdy modal jest otwarty (zapobiega przewijaniu) */
 :global(.modal-open) {
   overflow: hidden;
 }
-
 /* Animacja pojawienia się elementów */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
+@media (max-width: 1200px) {
+  .secondary-tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+  }
+}
 @media (max-width: 768px) {
   .tech-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -580,47 +590,53 @@ export default {
   .tech-card {
     padding: 1rem;
   }
-
   .secondary-tech-card {
-    padding: 0.8rem;
-    width: 90px;
-
+    padding: 0.6rem;
+    min-height: 90px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-
   .tech-icon {
     height: 60px;
   }
-
   .tech-icon.small {
-    height: 40px;
+    height: 35px;
+    margin-bottom: 0.4rem;
   }
-
   .tech-icon img {
+    width: 60px;
+    height: 60px;
     max-width: 60px;
     max-height: 60px;
   }
-
   .tech-icon.small img {
-    max-width: 40px;
-    max-height: 40px;
+    width: 32px;
+    height: 32px;
+    max-width: 32px;
+    max-height: 32px;
   }
-
   .tech-card h3 {
     font-size: 1.2rem;
   }
-
   .secondary-tech-card h4 {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-top: 0.3rem;
+    overflow-wrap: break-word;
   }
   .secondary-tech-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* maksymalnie 2 kolumny */
-    gap: 1rem;
-    justify-items: center; /* wyśrodkowanie każdego kafelka w kolumnie */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    justify-items: center;
+    grid-auto-rows: 1fr;
   }
   .secondary-tech-grid > .secondary-tech-card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
-    justify-self: center;     /* Wyśrodkowuje kafelek */
+    justify-self: center;
+    max-width: 120px;
   }
   .tech-details-content {
     width: 98vw;
@@ -629,35 +645,47 @@ export default {
     padding: 1rem;
     font-size: 1rem;
   }
-
   .tech-details-header h3 {
     font-size: 1.2rem;
     word-break: break-word;
   }
-
   .tech-details-body p,
   .tech-projects h4 {
     font-size: 1rem;
     word-break: break-word;
   }
-
   .tech-projects li {
     padding: 0.7rem;
     font-size: 0.95rem;
   }
-
   .project-links {
     flex-direction: column;
     gap: 0.5rem;
     align-items: flex-start;
   }
-
   .link-btn {
     width: 100%;
     box-sizing: border-box;
     text-align: center;
     padding: 0.6rem 0.5rem;
     font-size: 0.97rem;
+  }
+}
+@media (max-width: 350px) {
+  .secondary-tech-card h4 {
+    font-size: 0.75rem;
+  }
+  .secondary-tech-card {
+    padding: 0.4rem;
+  }
+  .tech-icon.small {
+    height: 30px;
+  }
+  .tech-icon.small img {
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
   }
 }
 </style>

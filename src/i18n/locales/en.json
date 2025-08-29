@@ -47,7 +47,7 @@
   "tech": {
     "title": "My Tech Stack",
     "description": "Technologies I know and use in my projects.",
-    "clickInstruction": "Click on a tile to see more information and example projects.",
+    "clickInstruction": "Click on a tile to see example projects.",
     "mainTechnologies": "Main Technologies",
     "otherTechnologies": "Other Technologies",
     "projectsUsing": "Projects using",
@@ -56,12 +56,19 @@
     "download": "Download",
     "noProjects": "No projects to display for this technology.",
     "technologies": {
+      "react": {
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Web application for managing Spotify playlists"
+          }
+        }
+      },
       "vue": {
-        "description": "I know the basics of Vue.js - my first project is this very website you're on, but in the future I plan to create frontends for websites using this framework",
         "projects": {
           "portfolio": {
             "name": "Portfolio CV",
-            "description": "Portfolio website with animations and interactive elements."
+            "description": "Portfolio website with animations and interactive elements"
           },
           "avgweather": {
             "name": "AVG WEATHER",
@@ -69,61 +76,19 @@
           }
         }
       },
-      "react": {
-        "description": "I know the basics of React, currently I've only used it in my bachelor's thesis but I plan to expand my projects in this environment",
-        "projects": {
-          "spotify": {
-            "name": "Spotify Matcher",
-            "description": "Web application for managing Spotify playlists"
-          }
-        }
-      },
       "angular": {
-        "description": "I know the basics of Angular and TypeScript - although I personally prefer React or Vue.js, I can take on projects in this environment",
         "projects": {
           "qrcode": {
-            "name": "QR code generator",
+            "name": "QR Code Generator",
             "description": "Web application for generating custom QR codes from text with personalization options"
           },
           "zaraz": {
             "name": "Zaraz Zrobimy",
-            "description": "I created the frontend of a pawnshop inventory management application, project completed as part of a Team Project course at university, supervised by Zeto Software Olsztyn - verified with a certificate from the company after completing the university course"
-          }
-        }
-      },
-      "html": {
-        "description": "HTML5 + CSS at intermediate level as it's basic skill for frontend development of web applications",
-        "projects": {
-          "www": {
-            "name": "WWW Programming Course",
-            "description": "WWW website for course completion using HTML and CSS tags as well as PHP"
-          }
-        }
-      },
-      "tailwind": {
-        "description": "I used this framework in my engineering thesis, so there's no repo link yet",
-        "projects": {
-          "spotify": {
-            "name": "Spotify Matcher",
-            "description": "Web application for managing Spotify playlists"
-          }
-        }
-      },
-      "javascript": {
-        "description": "JavaScript - I know the basics learned during state education, additionally I created a Chrome extension based mostly on pure JavaScript",
-        "projects": {
-          "quicksearch": {
-            "name": "Quick Search",
-            "description": "Google Chrome extension allowing search using shortcuts"
-          },
-          "www": {
-            "name": "WWW Programming Course",
-            "description": "Basic use of pure JavaScript for animation purposes"
+            "description": "Pawnshop inventory management application, project completed as part of a Team Project course at university"
           }
         }
       },
       "python": {
-        "description": "I know Python basics and feel comfortable in this programming language - when I need a backend project, I choose this language",
         "projects": {
           "uchwalomat": {
             "name": "Uchwalomat.PDF",
@@ -139,8 +104,35 @@
           }
         }
       },
+      "typescript": {
+        "projects": {
+          "spotimatcher": {
+            "name": "SpotiMatcher",
+            "description": "Application for matching music profiles based on Spotify preferences"
+          },
+          "zaraz": {
+            "name": "Zaraz Zrobimy",
+            "description": "Pawnshop inventory management application - team project with Zeto Software"
+          },
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "QR code generator with various customization options"
+          }
+        }
+      },
+      "javascript": {
+        "projects": {
+          "quicksearch": {
+            "name": "Quick Search",
+            "description": "Google Chrome extension allowing search using shortcuts"
+          },
+          "www": {
+            "name": "WWW Website",
+            "description": "Project using pure JavaScript for animation purposes"
+          }
+        }
+      },
       "php": {
-        "description": "I've written projects in pure PHP, I know its basics",
         "projects": {
           "quiz": {
             "name": "Polish License Plates Quiz",
@@ -148,21 +140,66 @@
           }
         }
       },
+      "django": {
+        "projects": {
+          "dikfinder": {
+            "name": "Dik Finder",
+            "description": "Application for locate shop with wk dzik products"
+          }
+        }
+      },
+      "html": {
+        "projects": {
+          "www": {
+            "name": "WWW Website",
+            "description": "WWW website for course completion using HTML and CSS tags as well as PHP"
+          }
+        }
+      },
+      "tailwind": {
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Web application for managing Spotify playlists"
+          }
+        }
+      },
+      "bootstrap": {
+        "projects": {
+          "quiz": {
+            "name": "Polish License Plates Quiz",
+            "description": "Website testing player's knowledge of Polish license plates in quiz form"
+          }
+        }
+      },
+      "cicd": {
+        "projects": {
+          "portfolio": {
+            "name": "Portfolio CV",
+            "description": "Portfolio website with automatic deployment to GitHub Pages"
+          },
+          "avgweather": {
+            "name": "AVG WEATHER",
+            "description": "Weather website with automatic deployment to GitHub Pages"
+          },
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "QR code generator with automatic deployment to GitHub Pages"
+          }
+        }
+      },
       "c": {
-        "description": "Basics learned in laboratory classes.",
         "projects": {
           "embedded": {
-            "name": "Course - Embedded Systems",
+            "name": "Embedded Systems",
             "description": "Repository from laboratory classes based on microcontroller programming"
           }
         }
       },
       "cpp": {
-        "description": "I know C++ basics covered in university classes",
         "projects": {}
       },
       "mysql": {
-        "description": "MySQL at intermediate level",
         "projects": {
           "quiz": {
             "name": "Polish License Plates Quiz",
@@ -210,7 +247,7 @@
       },
       "uchwalomat": {
         "title": "Uchwalomat.PDF",
-        "description": "Program for finding publication titles in PDF files"
+        "description": "Program for finding publication titles in PDF files with OCR support"
       },
       "spotify": {
         "title": "Spotify Matcher",
