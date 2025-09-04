@@ -116,7 +116,7 @@ export default {
           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
           projects: [
             { id: 'uchwalomat', repo: 'https://github.com/budziun/Uchwalomat.PDF', download: 'https://github.com/budziun/Uchwalomat.PDF/releases/download/UchwalomatPDF/Uchwalomat-PDF.exe' },
-            { id: 'yttomp3', repo: 'https://github.com/budziun/ytToMP3', demo: '' },
+            { id: 'yttomp3', repo: 'https://github.com/budziun/ytToMP3', download: 'https://github.com/budziun/ytToMP3/releases/download/v2.0/ytToMP3_v2.0.tar' },
             { id: 'unittest', repo: 'https://github.com/budziun/testowanie_opragromowania_python', demo: '' }
           ]
         },

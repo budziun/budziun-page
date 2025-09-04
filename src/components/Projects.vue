@@ -120,9 +120,10 @@ export default {
         },
         {
           id: 'yttomp3',
-          image: require('@/assets/images/mp3.png'),
+          image: require('@/assets/images/mp3_2.png'),
           tags: ['backend', 'python'],
-          repo: 'https://github.com/budziun/ytToMp3'
+          repo: 'https://github.com/budziun/ytToMp3',
+          download: 'https://github.com/budziun/ytToMP3/releases/download/v2.0/ytToMP3_v2.0.tar'
         },
         {
           id: 'zaraz',
