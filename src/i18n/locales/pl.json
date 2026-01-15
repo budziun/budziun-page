@@ -1,0 +1,301 @@
+{
+  "common": {
+    "loading": "Ładowanie...",
+    "switchToPolish": "Przełącz na język polski",
+    "switchToEnglish": "Przełącz na język angielski"
+  },
+  "meta": {
+    "title": "Jakub Budzich - Frontend Developer",
+    "description": "Strona Jakuba Budzicha - student informatyki i junior frontend developer. Projekty w Vue.js, React, Angular."
+  },
+  "nav": {
+    "about": "O mnie",
+    "tech": "Technologie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "name": "Jakub Budzich",
+    "jobTitle": "Junior Frontend Developer",
+    "description": "Tworzę nowoczesne i responsywne aplikacje webowe z wykorzystaniem najnowszych technologii.",
+    "viewProjects": "Zobacz moje projekty",
+    "contactBtn": "Kontakt",
+    "scrollDown": "Przewiń w dół"
+  },
+  "about": {
+    "title": "O mnie",
+    "paragraph1": "Jestem studentem informatyki 4 roku na UWM Olsztyn, po zakończeniu studiów pierwszego stopnia planuję podjąć dalszą naukę w celu uzyskania tytułu magistra z informatyki.",
+    "paragraph2": "Nie posiadam jeszcze doświadczenia zawodowego. Całą swoją wiedzę i umiejętności zawdzięczam kursom na studiach oraz własnych projektach które można znaleźć na moim profilu github.",
+    "paragraph3": "Jestem zawsze otwarty na nowe wyzwania i chętnie podejmuję się ambitnych projektów, głównie jako frontend developer, ale jestem gotowy na naukę w innych dziedzinach programowania."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Dane kontaktowe",
+    "description": "Jeśli jesteś zainteresowany współpracą lub masz jakiekolwiek pytania, nie wahaj się skontaktować ze mną.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "role": "Junior Frontend Developer",
+    "navigation": "Nawigacja",
+    "home": "Strona główna",
+    "socialMedia": "Social Media",
+    "copyright": "Wszelkie prawa zastrzeżone.",
+    "madeWith": "Strona stworzona z wykorzystaniem Vue.js"
+  },
+  "tech": {
+    "title": "Mój Tech Stack",
+    "description": "Technologie, które znam i wykorzystuję w swoich projektach.",
+    "clickInstruction": "Kliknij kafelek, aby zobaczyć przykładowe projekty.",
+    "mainTechnologies": "Główne Technologie",
+    "otherTechnologies": "Inne Technologie",
+    "projectsUsing": "Projekty wykorzystujące",
+    "repository": "Repozytorium",
+    "demo": "Demo",
+    "download": "Pobierz",
+    "noProjects": "Brak projektów do wyświetlenia dla tej technologii.",
+    "technologies": {
+      "react": {
+        "projects": {
+          "slidefy": {
+            "name": "Slidefy",
+            "description": "Aplikacja webowa do zarządzania playlistami Spotify"
+          },
+          "dzik": {
+            "name": "DZIK Map",
+            "description": "Aplikacja do wyswietlania sklepow z dostępnymi produktami WK DZIK"
+          },
+          "ecg": {
+            "name": "ECG Arrhythmia Classification",
+            "description": "Projekt klasyfikacji arytmii serca z użyciem sieci neuronowych CNN i LSTM - f1 score 0.93"
+          }
+        }
+      },
+      "vue": {
+        "projects": {
+          "portfolio": {
+            "name": "Portfolio CV",
+            "description": "Strona portfolio z animacjami i interaktywnymi elementami"
+          },
+          "avgweather": {
+            "name": "AVG WEATHER",
+            "description": "Strona wykorzystująca API pogodowe z kilku źródeł w celu pokazania użytkownikowi średniej wartości"
+          }
+        }
+      },
+      "angular": {
+        "projects": {
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "Aplikacja webowa do generowania własnych kodów QR z tekstu z możliwością personalizacji"
+          },
+          "zaraz": {
+            "name": "Zaraz Zrobimy",
+            "description": "Aplikacja do Zarządzania inwentarzem lombardu, projekt wykonany w ramach kursu na studiach Projekt Zespołowy"
+          }
+        }
+      },
+      "python": {
+        "projects": {
+          "uchwalomat": {
+            "name": "Uchwalomat.PDF",
+            "description": "Program do znajdowania tytułów publikacji w plikach PDF - stworzony podczas praktyk w urzędzie gminy"
+          },
+          "yttomp3": {
+            "name": "ytToMP3",
+            "description": "Program do pobierania utworów z YouTube w formacie .mp3"
+          },
+          "ecg": {
+            "name": "ECG Arrhythmia Classification",
+            "description": "Projekt klasyfikacji arytmii serca z użyciem sieci neuronowych CNN i LSTM - f1 score 0.93"
+          },
+          "dzik": {
+            "name": "DZIK Map",
+            "description": "Aplikacja do wyswietlania sklepow z dostępnymi produktami WK DZIK"
+          }
+        }
+      },
+      "typescript": {
+        "projects": {
+          "dzik": {
+            "name": "DZIK Map",
+            "description": "PAplikacja do wyswietlania sklepow z dostępnymi produktami WK DZIK"
+          },
+          "slidefy": {
+            "name": "Slidefy",
+            "description": "Aplikacja webowa do zarządzania playlistami Spotify"
+          },
+          "ecg": {
+            "name": "ECG Arrhythmia Classification",
+            "description": "Projekt klasyfikacji arytmii serca z użyciem sieci neuronowych CNN i LSTM - f1 score 0.93"
+          },
+          "zaraz": {
+            "name": "Zaraz Zrobimy",
+            "description": "Aplikacja do zarządzania inwentarzem lombardu - projekt zespołowy z Zeto Software"
+          },
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "Generator kodów QR z różnymi opcjami personalizacji"
+          }
+        }
+      },
+      "javascript": {
+        "projects": {
+          "quicksearch": {
+            "name": "Quick Search",
+            "description": "Rozszerzenie do Google Chrome pozwalające na szukanie za pomocą skrótów"
+          },
+          "www": {
+            "name": "Strona WWW",
+            "description": "Projekt z wykorzystaniem czystego JavaScript w celach animacji"
+          }
+        }
+      },
+      "php": {
+        "projects": {
+          "quiz": {
+            "name": "Quiz tablice pl",
+            "description": "Strona sprawdzająca wiedzę gracza ze znajomości polskich tablic rejestracyjnych w formie quizu"
+          }
+        }
+      },
+      "django": {
+        "projects": {
+          "dzik": {
+            "name": "DZIK Map",
+            "description": "Aplikacja do wyswietlania sklepow z dostępnymi produktami WK DZIK (REST API)"
+          }
+        }
+      },
+      "html": {
+        "projects": {
+          "www": {
+            "name": "Strona WWW",
+            "description": "Strona WWW na zaliczenie przedmiotu wykorzystująca znaczniki HTML i CSS oraz PHP"
+          }
+        }
+      },
+      "tailwind": {
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Aplikacja webowa do zarządzania playlistami Spotify"
+          }
+        }
+      },
+      "bootstrap": {
+        "projects": {
+          "quiz": {
+            "name": "Quiz tablice pl",
+            "description": "Strona sprawdzająca wiedzę gracza ze znajomości polskich tablic rejestracyjnych w formie quizu"
+          }
+        }
+      },
+      "cicd": {
+        "projects": {
+          "portfolio": {
+            "name": "Portfolio CV",
+            "description": "Strona portfolio z automatycznym wdrażaniem na GitHub Pages"
+          },
+          "avgweather": {
+            "name": "AVG WEATHER",
+            "description": "Strona z pogodą automatycznie wdrażana na GitHub Pages"
+          },
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "Generator kodów QR z automatycznym wdrażaniem na GitHub Pages"
+          }
+        }
+      },
+      "c": {
+        "projects": {
+          "embedded": {
+            "name": "Systemy wbudowane",
+            "description": "Repo z zajęć laboratoryjnych opartych na programowaniu mikrokontrolerów"
+          }
+        }
+      },
+      "cpp": {
+        "projects": {}
+      },
+      "mysql": {
+        "projects": {
+          "quiz": {
+            "name": "Quiz tablice pl",
+            "description": "Projekt bazy danych SQL opracowany w MySQL dla strony z quizami PHP"
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "Moje Projekty",
+    "description": "Wybrane projekty, które stworzyłem. Każdy z nich został zbudowany z myślą o rozwiązaniu konkretnego problemu i wykorzystaniu najlepszych praktyk programistycznych.",
+    "filters": {
+      "all": "Wszystkie",
+      "vuejs": "Vue.js",
+      "react": "React",
+      "angular": "Angular",
+      "javascript": "JavaScript",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "php": "PHP",
+      "python": "Python",
+      "ML": "Machine Learning",
+      "django": "Django",
+      "fastapi": "Fast API"
+    },
+    "links": {
+      "github": "GitHub",
+      "demo": "Demo",
+      "download": "Pobierz"
+    },
+    "projectList": {
+      "qrcode": {
+        "title": "QR Code Generator",
+        "description": "Aplikacja webowa do generowania kodów QR z własnego tekstu z personalizacją"
+      },
+      "avgweather": {
+        "title": "AVG WEATHER",
+        "description": "Strona wykorzystująca API pogodowe z kilku źródeł w celu pokazania użytkownikowi średniej wartości"
+      },
+      "portfolio": {
+        "title": "Portfolio CV",
+        "description": "Strona portfolio z animacjami i interaktywnymi elementami. Wykorzystuje Vue.js"
+      },
+      "quiz": {
+        "title": "Quiz tablice PL",
+        "description": "Strona w PHP przypominająca quiz dla tablic rejestracyjnych z Polski"
+      },
+      "uchwalomat": {
+        "title": "Uchwalomat.PDF",
+        "description": "Program do znajdowania tytułów publikacji w plikach PDF - wykorzystuje OCR do odczytywania dokumentów"
+      },
+      "ecg": {
+        "title": "ECG Arrhythmia Classification",
+        "description": "Projekt klasyfikacji arytmii serca z użyciem sieci neuronowych CNN i LSTM - f1 score 0.93"
+      },
+      "dzik": {
+        "title": "DZIK Map",
+        "description": "Aplikacja do znajdowania sklepów z produktami WK DZIK na mapie Polski"
+      },
+      "slidefy": {
+        "title": "Slidefy",
+        "description": "Aplikacja do zarządzania playlistami Spotify - praca inżynierska"
+      },
+      "quicksearch": {
+        "title": "Quick Search",
+        "description": "Rozszerzenie do Google Chrome do wyszukiwania skrótami"
+      },
+      "yttomp3": {
+        "title": "YT TO MP3",
+        "description": "Aplikacja do pobierania utworów z YouTube w formacie mp3"
+      },
+      "zaraz": {
+        "title": "Zaraz Zrobimy",
+        "description": "Aplikacja do zarządzania inwentarzem lombardu - projekt zespołowy z Zeto Software"
+      }
+    }
+  }
+}

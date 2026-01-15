@@ -1,0 +1,301 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "switchToPolish": "Switch to Polish",
+    "switchToEnglish": "Switch to English"
+  },
+  "meta": {
+    "title": "Jakub Budzich - Frontend Developer",
+    "description": "Jakub Budzich's website - computer science student and junior frontend developer. Projects in Vue.js, React, Angular."
+  },
+  "nav": {
+    "about": "About",
+    "tech": "Technologies",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Jakub Budzich",
+    "jobTitle": "Junior Frontend Developer",
+    "description": "I create modern and responsive web applications using the latest technologies.",
+    "viewProjects": "View my projects",
+    "contactBtn": "Contact",
+    "scrollDown": "Scroll down"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I am a 4th-year computer science student at UWM Olsztyn. After completing my bachelor's degree, I plan to continue my studies to obtain a master's degree in computer science.",
+    "paragraph2": "I don't have professional work experience yet. All my knowledge and skills come from university courses and personal projects that can be found on my GitHub profile.",
+    "paragraph3": "I am always open to new challenges and eager to take on ambitious projects, primarily as a frontend developer, but I'm ready to learn in other areas of programming."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Contact Information",
+    "description": "If you're interested in collaboration or have any questions, don't hesitate to contact me.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "role": "Junior Frontend Developer",
+    "navigation": "Navigation",
+    "home": "Home",
+    "socialMedia": "Social Media",
+    "copyright": "All rights reserved.",
+    "madeWith": "Website created using Vue.js"
+  },
+  "tech": {
+    "title": "My Tech Stack",
+    "description": "Technologies I know and use in my projects.",
+    "clickInstruction": "Click on a tile to see sample projects.",
+    "mainTechnologies": "Main Technologies",
+    "otherTechnologies": "Other Technologies",
+    "projectsUsing": "Projects using",
+    "repository": "Repository",
+    "demo": "Demo",
+    "download": "Download",
+    "noProjects": "No projects to display for this technology.",
+    "technologies": {
+      "react": {
+        "projects": {
+          "slidefy": {
+            "name": "Slidefy",
+            "description": "Web application for managing Spotify playlists"
+          },
+          "dzik": {
+            "name": "DZIK Map",
+            "description": "Application for displaying stores with available WK DZIK products"
+          },
+          "ecg": {
+            "name": "ECG Arrhythmia Classification",
+            "description": "Heart arrhythmia classification project using CNN and LSTM neural networks - f1 score 0.93"
+          }
+        }
+      },
+      "vue": {
+        "projects": {
+          "portfolio": {
+            "name": "Portfolio CV",
+            "description": "Portfolio website with animations and interactive elements"
+          },
+          "avgweather": {
+            "name": "AVG WEATHER",
+            "description": "Website using weather APIs from multiple sources to display average values to users"
+          }
+        }
+      },
+      "angular": {
+        "projects": {
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "Web application for generating custom QR codes from text with personalization options"
+          },
+          "zaraz": {
+            "name": "Zaraz Zrobimy",
+            "description": "Pawnshop inventory management application, project completed as part of a Team Project university course"
+          }
+        }
+      },
+      "python": {
+        "projects": {
+          "uchwalomat": {
+            "name": "Uchwalomat.PDF",
+            "description": "Program for finding publication titles in PDF files - created during internship at a municipal office"
+          },
+          "yttomp3": {
+            "name": "ytToMP3",
+            "description": "Program for downloading tracks from YouTube in .mp3 format"
+          },
+          "ecg": {
+            "name": "ECG Arrhythmia Classification",
+            "description": "Heart arrhythmia classification project using CNN and LSTM neural networks - f1 score 0.93"
+          },
+          "dzik": {
+            "name": "DZIK Map",
+            "description": "Application for displaying stores with available WK DZIK products"
+          }
+        }
+      },
+      "typescript": {
+        "projects": {
+          "dzik": {
+            "name": "DZIK Map",
+            "description": "Application for displaying stores with available WK DZIK products"
+          },
+          "slidefy": {
+            "name": "Slidefy",
+            "description": "Web application for managing Spotify playlists"
+          },
+          "ecg": {
+            "name": "ECG Arrhythmia Classification",
+            "description": "Heart arrhythmia classification project using CNN and LSTM neural networks - f1 score 0.93"
+          },
+          "zaraz": {
+            "name": "Zaraz Zrobimy",
+            "description": "Pawnshop inventory management application - team project with Zeto Software"
+          },
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "QR code generator with various personalization options"
+          }
+        }
+      },
+      "javascript": {
+        "projects": {
+          "quicksearch": {
+            "name": "Quick Search",
+            "description": "Google Chrome extension for searching using shortcuts"
+          },
+          "www": {
+            "name": "WWW Website",
+            "description": "Project using pure JavaScript for animations"
+          }
+        }
+      },
+      "php": {
+        "projects": {
+          "quiz": {
+            "name": "Polish License Plates Quiz",
+            "description": "Website testing users' knowledge of Polish license plates in quiz format"
+          }
+        }
+      },
+      "django": {
+        "projects": {
+          "dzik": {
+            "name": "DZIK Map",
+            "description": "Application for displaying stores with available WK DZIK products (REST API)"
+          }
+        }
+      },
+      "html": {
+        "projects": {
+          "www": {
+            "name": "WWW Website",
+            "description": "WWW website for course completion using HTML and CSS tags as well as PHP"
+          }
+        }
+      },
+      "tailwind": {
+        "projects": {
+          "spotify": {
+            "name": "Spotify Matcher",
+            "description": "Web application for managing Spotify playlists"
+          }
+        }
+      },
+      "bootstrap": {
+        "projects": {
+          "quiz": {
+            "name": "Polish License Plates Quiz",
+            "description": "Website testing users' knowledge of Polish license plates in quiz format"
+          }
+        }
+      },
+      "cicd": {
+        "projects": {
+          "portfolio": {
+            "name": "Portfolio CV",
+            "description": "Portfolio website with automatic deployment to GitHub Pages"
+          },
+          "avgweather": {
+            "name": "AVG WEATHER",
+            "description": "Weather website with automatic deployment to GitHub Pages"
+          },
+          "qrcode": {
+            "name": "QR Code Generator",
+            "description": "QR code generator with automatic deployment to GitHub Pages"
+          }
+        }
+      },
+      "c": {
+        "projects": {
+          "embedded": {
+            "name": "Embedded Systems",
+            "description": "Repository from lab classes focused on microcontroller programming"
+          }
+        }
+      },
+      "cpp": {
+        "projects": {}
+      },
+      "mysql": {
+        "projects": {
+          "quiz": {
+            "name": "Polish License Plates Quiz",
+            "description": "SQL database project developed in MySQL for PHP quiz website"
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Selected projects I've created. Each was built with solving a specific problem in mind and using best programming practices.",
+    "filters": {
+      "all": "All",
+      "vuejs": "Vue.js",
+      "react": "React",
+      "angular": "Angular",
+      "javascript": "JavaScript",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "php": "PHP",
+      "python": "Python",
+      "ML": "Machine Learning",
+      "django": "Django",
+      "fastapi": "Fast API"
+    },
+    "links": {
+      "github": "GitHub",
+      "demo": "Demo",
+      "download": "Download"
+    },
+    "projectList": {
+      "qrcode": {
+        "title": "QR Code Generator",
+        "description": "Web application for generating QR codes from custom text with personalization"
+      },
+      "avgweather": {
+        "title": "AVG WEATHER",
+        "description": "Website using weather APIs from multiple sources to display average values to users"
+      },
+      "portfolio": {
+        "title": "Portfolio CV",
+        "description": "Portfolio website with animations and interactive elements. Built using Vue.js"
+      },
+      "quiz": {
+        "title": "Polish License Plates Quiz",
+        "description": "PHP website featuring a quiz about Polish license plates"
+      },
+      "uchwalomat": {
+        "title": "Uchwalomat.PDF",
+        "description": "Program for finding publication titles in PDF files - uses OCR to read documents"
+      },
+      "ecg": {
+        "title": "ECG Arrhythmia Classification",
+        "description": "Heart arrhythmia classification project using CNN and LSTM neural networks - f1 score 0.93"
+      },
+      "dzik": {
+        "title": "DZIK Map",
+        "description": "Application for finding stores with WK DZIK products on the map of Poland"
+      },
+      "slidefy": {
+        "title": "Slidefy",
+        "description": "Spotify playlist management application - bachelor's thesis"
+      },
+      "quicksearch": {
+        "title": "Quick Search",
+        "description": "Google Chrome extension for searching with shortcuts"
+      },
+      "yttomp3": {
+        "title": "YT TO MP3",
+        "description": "Application for downloading tracks from YouTube in mp3 format"
+      },
+      "zaraz": {
+        "title": "Zaraz Zrobimy",
+        "description": "Pawnshop inventory management application - team project with Zeto Software"
+      }
+    }
+  }
+}
