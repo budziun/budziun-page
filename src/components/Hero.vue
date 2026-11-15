@@ -1,16 +1,24 @@
 <template>
   <section id="hero" class="hero-section">
     <div class="hero-content">
-      <div class="hero-image-container">
+      <div class="hero-image-container" ref="heroTilt">
         <div class="hero-image" ref="heroImage">
-          <img src="../assets/pp_me.png" alt="PP" />
+          <img src="../assets/pp_me.png" alt="Jakub Budzich" fetchpriority="high" decoding="async" />
         </div>
       </div>
       <div class="hero-text">
         <h1>
-          <span class="animated-text" v-for="(letter, index) in nameLetters" :key="index"
-                :style="{ animationDelay: `${index * 0.1}s` }">
-            {{ letter }}
+          <span
+            v-for="(word, wordIndex) in nameWords"
+            :key="wordIndex"
+            class="word-group"
+          >
+            <span
+              v-for="item in word"
+              :key="item.index"
+              class="animated-text"
+              :style="{ animationDelay: `${item.index * 0.06}s` }"
+            >{{ item.char }}</span>
           </span>
         </h1>
         <h2 class="job-title">
@@ -20,10 +28,10 @@
           {{ $t('hero.description') }}
         </p>
         <div class="hero-cta">
-          <a href="#" @click.prevent="scrollToSection('projects')" class="btn btn-primary">
+          <a href="#projects" @click.prevent="scrollToSection('projects')" class="btn btn-primary">
             {{ $t('hero.viewProjects') }}
           </a>
-          <a href="#" @click.prevent="scrollToSection('contact')" class="btn btn-secondary">
+          <a href="#contact" @click.prevent="scrollToSection('contact')" class="btn btn-secondary">
             {{ $t('hero.contactBtn') }}
           </a>
         </div>
@@ -45,36 +53,49 @@ export default {
   name: 'Hero_component',
   data() {
     return {
-      nameLetters: this.$t('hero.name').split('')
+      hasFinePointer: false
+    }
+  },
+  computed: {
+    nameWords() {
+      const fullText = this.$t('hero.name') || '';
+      let globalIndex = 0;
+      return fullText.split(' ').map(word => {
+        const chars = word.split('').map(char => ({
+          char,
+          index: globalIndex++
+        }));
+        globalIndex++;
+        return chars;
+      });
     }
   },
   mounted() {
     this.initParallaxEffect();
   },
-  watch: {
-    // Obserwowanie zmian języka
-    '$i18n.locale'() {
-      // Aktualizacja nameLetters po zmianie języka
-      this.nameLetters = this.$t('hero.name').split('');
-      this.$nextTick(() => {
-      });
+  beforeUnmount() {
+    if (this.hasFinePointer) {
+      window.removeEventListener('mousemove', this.handleMouseMove);
     }
   },
   methods: {
     initParallaxEffect() {
-      window.addEventListener('mousemove', this.handleMouseMove);
+      if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        this.hasFinePointer = true;
+        window.addEventListener('mousemove', this.handleMouseMove, { passive: true });
+      }
     },
     handleMouseMove(e) {
-      if (this.$refs.heroImage) {
-        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-        this.$refs.heroImage.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+      if (this.$refs.heroTilt && window.scrollY < window.innerHeight) {
+        const xAxis = (window.innerWidth / 2 - e.clientX) / 35;
+        const yAxis = (window.innerHeight / 2 - e.clientY) / 35;
+        this.$refs.heroTilt.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
       }
     },
     scrollToSection(section) {
       const element = document.getElementById(section);
       if (element) {
-        element.scrollIntoView({behavior: 'smooth', block: 'start'});
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   }
@@ -84,6 +105,7 @@ export default {
 <style scoped>
 .hero-section {
   min-height: 100vh;
+  padding: 6.5rem 0 5.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,29 +130,31 @@ export default {
 
 .hero-image-container {
   perspective: 1000px;
-  width: 40%;
-  min-width: 180px;
+  width: 38%;
+  min-width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.25s ease-out;
+  transform-style: preserve-3d;
 }
 
 .hero-image {
-  width: 300px;
-  height: 300px;
-  max-width: 80vw;
-  max-height: 80vw;
+  width: 290px;
+  height: 290px;
+  max-width: 75vw;
+  max-height: 75vw;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease-out;
   animation: floatImage 6s ease-in-out infinite;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
+
 .hero-image img {
   width: 100%;
   height: 100%;
@@ -138,59 +162,66 @@ export default {
   object-position: 30% 80%;
   display: block;
 }
+
 .hero-text {
-  width: 60%;
+  width: 62%;
   color: white;
   text-align: left;
   padding-left: 3rem;
   min-width: 0;
-  word-break: break-word;
 }
 
 h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  margin-bottom: 0.85rem;
   font-weight: 700;
   display: flex;
   flex-wrap: wrap;
-  line-height: 1.1;
-  word-break: break-word;
+  gap: 0.15rem 0.85rem;
+  line-height: 1.15;
+}
+
+.word-group {
+  display: inline-flex;
+  white-space: nowrap;
 }
 
 .animated-text {
   display: inline-block;
   opacity: 0;
-  animation: fadeInLetter 0.5s forwards;
-  margin-right: 0.1rem;
-  white-space: pre;
+  animation: fadeInLetter 0.45s forwards;
 }
 
 .job-title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.92);
   opacity: 0;
-  animation: fadeIn 1s forwards 1s;
+  animation: fadeIn 0.8s forwards 0.6s;
 }
 
 .hero-description {
-  font-size: 1.2rem;
+  font-size: clamp(0.98rem, 1.4vw, 1.15rem);
+  line-height: 1.65;
   margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.88);
   opacity: 0;
-  animation: fadeIn 1s forwards 1.5s;
-  max-width: 600px;
-  word-break: break-word;
+  animation: fadeIn 0.8s forwards 0.9s;
+  max-width: 640px;
 }
 
 .hero-cta {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   opacity: 0;
-  animation: fadeIn 1s forwards 2s;
+  animation: fadeIn 0.8s forwards 1.2s;
 }
 
 .btn {
-  padding: 0.8rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
@@ -226,12 +257,13 @@ h1 {
 .scroll-indicator {
   position: absolute;
   left: 50%;
-  bottom: 2rem;
+  bottom: 1.5rem;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10;
+  cursor: pointer;
 }
 
 .scroll-indicator span {
@@ -270,7 +302,7 @@ h1 {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-16px);
   }
   100% {
     transform: translateY(0px);
@@ -280,7 +312,7 @@ h1 {
 @keyframes fadeInLetter {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
@@ -302,33 +334,37 @@ h1 {
 @keyframes scrollArrow {
   0% {
     opacity: 0;
-    transform: rotate(45deg) translate(-20px, -20px);
+    transform: rotate(45deg) translate(-15px, -15px);
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: rotate(45deg) translate(20px, 20px);
+    transform: rotate(45deg) translate(15px, 15px);
   }
 }
 
 /* --- RESPONSYWNOŚĆ --- */
 @media (max-width: 992px) {
+  .hero-section {
+    padding: 6rem 0 5rem;
+  }
+
   .hero-content {
     flex-direction: column;
     text-align: center;
-    padding-bottom: 80px;
   }
 
-  .hero-image-container, .hero-text {
+  .hero-image-container,
+  .hero-text {
     width: 100%;
     min-width: 0;
   }
 
   .hero-text {
     padding-left: 0;
-    margin-top: 2rem;
+    margin-top: 1.75rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -336,90 +372,94 @@ h1 {
 
   h1 {
     justify-content: center;
-    font-size: 2.5rem;
     text-align: center;
-    word-break: break-word;
+    gap: 0.1rem 0.65rem;
+  }
+
+  .hero-image {
+    width: 220px;
+    height: 220px;
   }
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 5.5rem 0 4.5rem;
+  }
+
   .hero-content {
-    padding-bottom: 100px;
+    padding: 0 1.25rem;
   }
 
   .scroll-indicator {
     bottom: 1rem;
   }
 
-  h1 {
-    font-size: 2rem;
-  }
-
   .job-title {
-    font-size: 1.1rem;
     text-align: center;
     margin-bottom: 1rem;
   }
 
   .hero-description {
     text-align: center;
-    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
 
   .hero-cta {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.85rem;
     width: 100%;
-    align-items: center;
+    max-width: 340px;
+    align-items: stretch;
   }
 
   .btn {
-    width: 90%;
+    width: 100%;
     padding: 0.8rem 1rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .hero-image {
-    width: 180px;
-    height: 180px;
-    max-width: 90vw;
-    max-height: 90vw;
+    width: 175px;
+    height: 175px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 1rem 0.2rem;
+    padding: 5rem 0 4rem;
   }
+
   .hero-content {
-    padding: 0 0.3rem 80px 0.3rem;
+    padding: 0 1rem;
   }
+
   .hero-image {
-    width: max;
+    width: 145px;
+    height: 145px;
   }
+
   h1 {
-    font-size: 1.3rem;
-    padding: 0;
+    font-size: 1.65rem;
+    gap: 0.1rem 0.5rem;
   }
+
   .job-title {
-    font-size: 0.95rem;
-    margin-bottom: 0.7rem;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
   }
+
   .hero-description {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.92rem;
+    margin-bottom: 1.25rem;
   }
-  .btn {
-    font-size: 0.85rem;
-    padding: 0.7rem 0.5rem;
-    width: 100%;
-  }
+
   .scroll-indicator {
-    bottom: 0.5rem;
+    bottom: 0.6rem;
   }
 }
-@media (max-height: 500px) {
+
+@media (max-height: 620px) {
   .scroll-indicator {
     display: none !important;
   }

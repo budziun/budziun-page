@@ -50,7 +50,7 @@ export default {
             console.log('Parallax effect active');
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -75,7 +75,7 @@ export default {
             });
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
         handleScroll(); // Wywołanie na start
 

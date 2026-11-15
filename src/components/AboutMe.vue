@@ -1,6 +1,7 @@
 <template>
   <section id="about" class="section about-section">
     <h2 class="section-title" ref="sectionTitle">{{ $t('about.title') }}</h2>
+    <p class="about-subtitle fade-in" ref="aboutSubtitle">{{ $t('about.subtitle') }}</p>
     <div class="about-content">
       <div class="about-text">
         <p ref="aboutText1" class="fade-in">
@@ -23,18 +24,12 @@ export default {
   mounted() {
     this.setupIntersectionObserver();
   },
-  watch: {
-    '$i18n.locale'() {
-      this.$nextTick(() => {
-      });
-    }
-  },
   methods: {
     setupIntersectionObserver() {
       const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.3
+        threshold: 0.2
       };
 
       const observer = new IntersectionObserver((entries) => {
@@ -48,6 +43,7 @@ export default {
 
       const elements = [
         this.$refs.sectionTitle,
+        this.$refs.aboutSubtitle,
         this.$refs.aboutText1,
         this.$refs.aboutText2,
         this.$refs.aboutText3
@@ -55,7 +51,7 @@ export default {
 
       elements.forEach((el, index) => {
         if (el) {
-          el.style.transitionDelay = `${index * 0.2}s`;
+          el.style.transitionDelay = `${index * 0.12}s`;
           observer.observe(el);
         }
       });
@@ -67,11 +63,19 @@ export default {
 <style scoped>
 .about-section {
   background-color: var(--bg-color);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 2rem;
+}
+
+.about-subtitle {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  line-height: 1.5;
 }
 
 .about-content {
@@ -79,6 +83,7 @@ export default {
   justify-content: center;
   max-width: 800px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .about-text {
@@ -90,15 +95,8 @@ export default {
 .about-text p {
   margin-bottom: 1.5rem;
   line-height: 1.8;
-  font-size: 1.1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: var(--transition);
-}
-
-.about-text p.visible {
-  opacity: 1;
-  transform: translateY(0);
+  font-size: 1.08rem;
+  color: var(--text-color);
 }
 
 .about-text p:last-child {
@@ -107,8 +105,8 @@ export default {
 
 .fade-in {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(25px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .fade-in.visible {
@@ -117,28 +115,14 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .about-section {
-    padding: 2rem 1rem;
-  }
-
-  .about-content {
-    flex-direction: column;
-    align-items: center;
+  .about-subtitle {
+    font-size: 0.98rem;
+    margin-bottom: 1.5rem;
   }
 
   .about-text p {
     font-size: 1rem;
-    word-break: break-word;
-  }
-}
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.3rem;
-    text-align: center;
-    word-break: break-word;
-  }
-  .about-section {
-    padding: 1rem 0.5rem;
+    margin-bottom: 1.2rem;
   }
 }
 </style>

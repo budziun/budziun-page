@@ -94,7 +94,7 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll, { passive: true });
     this.checkSectionVisibility();
   },
   beforeUnmount() {

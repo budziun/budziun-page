@@ -5,8 +5,8 @@
     "switchToEnglish": "Switch to English"
   },
   "meta": {
-    "title": "Jakub Budzich - Frontend Developer",
-    "description": "Jakub Budzich's website - computer science student and junior frontend developer. Projects in Vue.js, React, Angular."
+    "title": "Jakub Budzich — Junior Frontend Developer • Computer Science Engineer",
+    "description": "Jakub Budzich's portfolio - Junior Frontend Developer, Computer Science Engineer (B.Eng.) and current M.Sc. student at UWM. Projects in Vue.js, Angular, React, Python."
   },
   "nav": {
     "about": "About",
@@ -16,17 +16,18 @@
   },
   "hero": {
     "name": "Jakub Budzich",
-    "jobTitle": "Junior Frontend Developer",
-    "description": "I create modern and responsive web applications using the latest technologies.",
+    "jobTitle": "Junior Frontend Developer • Computer Science Engineer",
+    "description": "I specialize in delivering interactive web applications with Vue, Angular, and React — combining clean UI with network & security optimization.",
     "viewProjects": "View my projects",
     "contactBtn": "Contact",
     "scrollDown": "Scroll down"
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I am a 4th-year computer science student at UWM Olsztyn. After completing my bachelor's degree, I plan to continue my studies to obtain a master's degree in computer science.",
-    "paragraph2": "I don't have professional work experience yet. All my knowledge and skills come from university courses and personal projects that can be found on my GitHub profile.",
-    "paragraph3": "I am always open to new challenges and eager to take on ambitious projects, primarily as a frontend developer, but I'm ready to learn in other areas of programming."
+    "subtitle": "Junior Frontend Developer • Computer Science Engineer & Current M.Sc. Student at UWM",
+    "paragraph1": "I specialize in delivering interactive web applications using Vue.js, Angular, and React. As an engineering graduate and current Master's student in Computer Science at UWM Olsztyn (Computer Systems and Network Design), I ensure my solutions are not only visually polished and intuitive, but also secure and optimized in terms of network architecture.",
+    "paragraph2": "Beyond frontend development, I work comfortably across backend technologies, databases, and AI/ML — building REST APIs in Python (FastAPI, Django) and PHP, containerizing apps with Docker, and developing deep learning models with PyTorch.",
+    "paragraph3": "I am always open to new challenges and eager to take on ambitious projects, primarily as a Frontend Developer as well as in broader Fullstack and IT roles."
   },
   "contact": {
     "title": "Contact",

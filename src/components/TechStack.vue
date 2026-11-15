@@ -16,7 +16,7 @@
           @click="openTechDetails(tech.id)"
       >
         <div class="tech-icon">
-          <img :src="tech.icon" :alt="tech.name" />
+          <img :src="tech.icon" :alt="tech.name" loading="lazy" decoding="async" />
         </div>
         <h3>{{ tech.name }}</h3>
       </div>
@@ -31,7 +31,7 @@
           :style="{ animationDelay: `${index * 0.1}s` }"
       >
         <div class="tech-icon small">
-          <img :src="tech.icon" :alt="tech.name" />
+          <img :src="tech.icon" :alt="tech.name" loading="lazy" decoding="async" />
         </div>
         <h4>{{ tech.name }}</h4>
       </div>
@@ -89,9 +89,9 @@ export default {
           name: 'React',
           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
           projects: [
-            { id: 'slidefy', repo: 'https://github.com/budziun/Slidefy', demo: '' },
+            { id: 'slidefy', repo: 'https://github.com/budziun/Slidefy', demo: 'https://slidefy.budziun.pl/' },
             { id: 'ecg', repo: 'https://github.com/budziun/ecg-project', demo: '' },
-            { id: 'dzik', repo: 'https://github.com/budziun/find-dzik', demo: '' }
+            { id: 'dzik', repo: 'https://github.com/budziun/find-dzik', demo: 'https://www.dzikmapa.pl/' }
           ]
         },
         {
@@ -99,7 +99,7 @@ export default {
           name: 'Vue.js',
           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
           projects: [
-            { id: 'portfolio', repo: 'https://github.com/budziun/budziun-page', demo: 'https://budziun.github.io/budziun-page/' },
+            { id: 'portfolio', repo: 'https://github.com/budziun/budziun-page', demo: 'https://budziun.pl/' },
             { id: 'avgweather', repo: 'https://github.com/budziun/avg-weather', demo: 'https://budziun.github.io/avg-weather/' }
           ]
         },
@@ -118,7 +118,7 @@ export default {
           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
           projects: [
             { id: 'ecg', repo: 'https://github.com/budziun/ecg-project', demo: '' },
-            { id: 'dzik', repo: 'https://github.com/budziun/find-dzik', demo: '' },
+            { id: 'dzik', repo: 'https://github.com/budziun/find-dzik', demo: 'https://www.dzikmapa.pl/' },
             { id: 'uchwalomat', repo: 'https://github.com/budziun/Uchwalomat.PDF', download: 'https://github.com/budziun/Uchwalomat.PDF/releases/download/UchwalomatPDF/Uchwalomat-PDF.exe' },
             { id: 'yttomp3', repo: 'https://github.com/budziun/ytToMP3', download: 'https://github.com/budziun/ytToMP3/releases/download/v2.0/ytToMP3_v2.0.tar' }
           ]
@@ -128,9 +128,9 @@ export default {
           name: 'TypeScript',
           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
           projects: [
-            { id: 'slidefy', repo: 'https://github.com/budziun/Slidefy', demo: '' },
+            { id: 'slidefy', repo: 'https://github.com/budziun/Slidefy', demo: 'https://slidefy.budziun.pl/' },
             { id: 'ecg', repo: 'https://github.com/budziun/ecg-project', demo: '' },
-            { id: 'dzik', repo: 'https://github.com/budziun/find-dzik', demo: '' },
+            { id: 'dzik', repo: 'https://github.com/budziun/find-dzik', demo: 'https://www.dzikmapa.pl/' },
             { id: 'zaraz', repo: 'https://github.com/Cent0l/ZarazZrobimy', demo: '' },
             { id: 'qrcode', repo: 'https://github.com/budziun/qr-code-generator', demo: 'https://budziun.github.io/qr-code-generator/' }
           ]
@@ -149,7 +149,7 @@ export default {
           name: 'PHP',
           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
           projects: [
-            { id: 'quiz', repo: 'https://github.com/budziun/quiz-tablice-pl', demo: 'https://quiz-tablice-pl-production.up.railway.app/' }
+            { id: 'quiz', repo: 'https://github.com/budziun/quiz-tablice-pl', demo: 'https://quiz-tablice.budziun.pl/' }
           ]
         },
         {
@@ -157,7 +157,7 @@ export default {
           name: 'Django',
           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg',
           projects: [
-            { id: 'dzik', repo: 'https://github.com/budziun/find-dzik', demo: '' }
+            { id: 'dzik', repo: 'https://github.com/budziun/find-dzik', demo: 'https://www.dzikmapa.pl/' }
           ]
         }
       ],
@@ -165,7 +165,7 @@ export default {
         {
           id: 'html',
           name: 'HTML5 + CSS3',
-          icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/791px-CSS3_and_HTML5_logos_and_wordmarks.svg.png?20150111171555',
+          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
           projects: [
             { id: 'www', repo: 'https://github.com/budziun/WWW', demo: '' }
           ]
@@ -183,7 +183,7 @@ export default {
           name: 'Bootstrap',
           icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg',
           projects: [
-            { id: 'quiz', repo: 'https://github.com/budziun/quiz-tablice-pl', demo: 'https://quiz-tablice-pl-production.up.railway.app/' }
+            { id: 'quiz', repo: 'https://github.com/budziun/quiz-tablice-pl', demo: 'https://quiz-tablice.budziun.pl/' }
           ]
         },
         {
@@ -298,11 +298,9 @@ export default {
 .tech-section {
   background-color: #f9f9f9;
   position: relative;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 4rem;
 }
 .tech-description {
   text-align: center;
@@ -606,9 +604,10 @@ export default {
     padding: 1rem;
   }
   .secondary-tech-card {
-    padding: 0.6rem;
-    min-height: 90px;
-    aspect-ratio: 1 / 1;
+    padding: 0.75rem 0.5rem;
+    min-height: 100px;
+    width: 100%;
+    aspect-ratio: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -645,13 +644,13 @@ export default {
   .secondary-tech-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
-    justify-items: center;
+    justify-items: stretch;
     grid-auto-rows: 1fr;
   }
   .secondary-tech-grid > .secondary-tech-card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     justify-self: center;
-    max-width: 120px;
+    max-width: 180px;
   }
   .tech-details-content {
     width: 98vw;

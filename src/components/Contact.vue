@@ -76,7 +76,6 @@ export default {
 <style scoped>
 .contact-section {
   color: black;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,18 +89,17 @@ export default {
 .contact-content {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   width: 100%;
   max-width: 800px;
 }
 
 .contact-info {
   flex: 1;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--card-bg);
   border-radius: 10px;
   padding: 2.5rem;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   width: 100%;
 }
 
@@ -138,6 +136,11 @@ export default {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+.contact-text {
+  min-width: 0;
+  word-break: break-word;
 }
 
 .contact-icon {

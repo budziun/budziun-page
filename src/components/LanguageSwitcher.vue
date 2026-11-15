@@ -47,8 +47,7 @@ export default {
 .language-switcher {
   display: flex;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 25px;
   padding: 0.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);

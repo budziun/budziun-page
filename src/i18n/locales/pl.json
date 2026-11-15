@@ -5,8 +5,8 @@
     "switchToEnglish": "Przełącz na język angielski"
   },
   "meta": {
-    "title": "Jakub Budzich - Frontend Developer",
-    "description": "Strona Jakuba Budzicha - student informatyki i junior frontend developer. Projekty w Vue.js, React, Angular."
+    "title": "Jakub Budzich — Junior Frontend Developer • Inżynier Informatyki",
+    "description": "Portfolio Jakuba Budzicha - Junior Frontend Developer, inżynier studiów informatycznych i aktualny student studiów magisterskich na UWM. Projekty w Vue.js, Angular, React, Python."
   },
   "nav": {
     "about": "O mnie",
@@ -16,17 +16,18 @@
   },
   "hero": {
     "name": "Jakub Budzich",
-    "jobTitle": "Junior Frontend Developer",
-    "description": "Tworzę nowoczesne i responsywne aplikacje webowe z wykorzystaniem najnowszych technologii.",
+    "jobTitle": "Junior Frontend Developer • Inżynier Informatyki",
+    "description": "Specjalizuję się w dostarczaniu interaktywnych aplikacji przy użyciu Vue, Angulara oraz Reacta — estetycznych, bezpiecznych i zoptymalizowanych.",
     "viewProjects": "Zobacz moje projekty",
     "contactBtn": "Kontakt",
     "scrollDown": "Przewiń w dół"
   },
   "about": {
     "title": "O mnie",
-    "paragraph1": "Jestem studentem informatyki 4 roku na UWM Olsztyn, po zakończeniu studiów pierwszego stopnia planuję podjąć dalszą naukę w celu uzyskania tytułu magistra z informatyki.",
-    "paragraph2": "Nie posiadam jeszcze doświadczenia zawodowego. Całą swoją wiedzę i umiejętności zawdzięczam kursom na studiach oraz własnych projektach które można znaleźć na moim profilu github.",
-    "paragraph3": "Jestem zawsze otwarty na nowe wyzwania i chętnie podejmuję się ambitnych projektów, głównie jako frontend developer, ale jestem gotowy na naukę w innych dziedzinach programowania."
+    "subtitle": "Junior Frontend Developer • Inżynier studiów informatycznych i aktualny student studiów magisterskich na UWM",
+    "paragraph1": "Specjalizuję się w dostarczaniu interaktywnych aplikacji webowych przy użyciu Vue.js, Angulara oraz Reacta. Jako inżynier studiów informatycznych i aktualny student studiów magisterskich na UWM w Olsztynie (specjalizacja: Projektowanie systemów i sieci komputerowych), dbam o to, by moje rozwiązania były nie tylko estetyczne i intuicyjne, ale też bezpieczne i zoptymalizowane pod kątem architektury sieciowej.",
+    "paragraph2": "Poza warstwą frontendową swobodnie poruszam się w technologiach backendowych, bazach danych oraz zagadnieniach AI/ML — tworzę REST API w Pythonie (FastAPI, Django) i PHP, pracuję z Dockerem oraz rozwijam modele uczenia maszynowego w PyTorch.",
+    "paragraph3": "Jestem zawsze otwarty na nowe wyzwania i chętnie podejmuję się ambitnych projektów — zarówno jako Frontend Developer, jak i w szerszym zakresie Fullstack / IT."
   },
   "contact": {
     "title": "Kontakt",
@@ -120,7 +121,7 @@
         "projects": {
           "dzik": {
             "name": "DZIK Map",
-            "description": "PAplikacja do wyswietlania sklepow z dostępnymi produktami WK DZIK"
+            "description": "Aplikacja do wyswietlania sklepow z dostępnymi produktami WK DZIK"
           },
           "slidefy": {
             "name": "Slidefy",
